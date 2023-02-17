@@ -1,0 +1,84 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  position: relative;
+  background-image: url(./img/bimg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  /* background-image: linear-gradient(
+    to bottom left,
+    rgba(42, 3, 185, 0.997),
+    rgba(49, 8, 68, 0.697)
+  ); */
+  background: radial-gradient(at 18% 99%, #002047 0px, transparent 50%) repeat
+      scroll 0% 0%,
+    radial-gradient(at 97% 8%, #3b0141a9 0px, transparent 50%) repeat scroll 0%
+      0%,
+    radial-gradient(at 79% 82%, #07284eb7 0px, transparent 50%) repeat scroll 0%
+      0%,
+    radial-gradient(at 96% 10%, #011c3a4d 0px, transparent 50%) repeat scroll 0%
+      0%,
+    radial-gradient(at 42% 20%, #052d5c 0px, transparent 50%) repeat scroll 0%
+      0%,
+    radial-gradient(at 4% 49%, #002047bb 0px, transparent 50%) repeat scroll 0%
+      0%,
+    rgba(0, 0, 0, 0)
+      radial-gradient(at 57% 33%, rgba(115, 28, 255, 0.2) 0px, #01152c8a 50%)
+      repeat scroll 0% 0%;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+.main-txt {
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 1;
+  flex-direction: column;
+  padding: 80px;
+}
+
+.main-txt-head {
+  font-size: 82px;
+  margin: 30px 0px;
+}
+
+.play-btn {
+  all: revert;
+  outline: none;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #14519b5e;
+  color: #fff;
+  font-size: 18px;
+  box-shadow: 1px 1px 15px #1e60b1;
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .main-txt {
+    padding: 20px;
+  }
+  .main-txt-head {
+    font-size: 30px;
+  }
+}
